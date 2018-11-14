@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Two-way binding demo</h1>
+    <h2>Simple input element</h2>
+    <input v-model="message" />
+    <p>Message is: {{ message }}</p>
+    <button @click="clear()">Clear</button>
+    <h2>Custom color picker component</h2>
+    <Color v-model="color" />
+    <p>Color is: {{ color }}</p>
+    <button @click="resetColor()">Reset Color</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Color from './components/Color.vue'
 export default {
   name: 'app',
+  data: () => ({
+    message: 'initial message',
+    color: '#ddeeff'
+  }),
+  methods: {
+    clear() {
+      this.message = '';
+    },
+    resetColor() {
+      this.color = '#ddeeff'
+    }
+  },
   components: {
-    HelloWorld
+    Color
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
