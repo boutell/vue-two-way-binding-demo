@@ -11,11 +11,6 @@
 export default {
   name: 'Color',
   props: [ 'value' ],
-  data: () => ({
-    red: 0,
-    green: 0,
-    blue: 0
-  }),
   computed: {
     backgroundStyle() {
       return `background-color: ${this.value}`;
