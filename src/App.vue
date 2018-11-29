@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Two-way binding demo</h1>
+    <h1>Vue <a href="https://vuejs.org/v2/guide/forms.html">two-way binding</a>a> demo</h1>
     <h2>Simple input element</h2>
     <input v-model="message" />
     <p>Message is: {{ message }}</p>
@@ -9,6 +9,7 @@
     <Color v-model="color" />
     <p>Color is: {{ color }}</p>
     <button @click="resetColor()">Reset Color</button>
+    <h2><a href="https://github.com/boutell/vue-two-way-binding-demo">Source Code</a></h2>
   </div>
 </template>
 
