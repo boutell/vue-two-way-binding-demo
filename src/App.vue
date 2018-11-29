@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Vue <a href="https://vuejs.org/v2/guide/forms.html">two-way binding</a>a> demo</h1>
+    <h1>Vue <a href="https://vuejs.org/v2/guide/forms.html">two-way binding</a> demo</h1>
     <h2>Simple input element</h2>
     <input v-model="message" />
     <p>Message is: {{ message }}</p>
